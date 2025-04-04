@@ -1,4 +1,4 @@
-FROM centos:latest
+FROM rockylinux:latest
 LABEL maintainer="Cloudwebsite"
 RUN yum -y install httpd
 COPY index.html /var/www/html/
