@@ -1,6 +1,4 @@
-FROM rockylinux:latest
-LABEL maintainer="Cloudwebsite"
-RUN yum -y install httpd
-COPY index.html /var/www/html/
-ENTRYPOINT ["/usr/sbin/httpd", "-D", "FOREGROUND"]
-EXPOSE 80
+FROM docker/whalesay:latest
+LABEL Name=cloudwebsite Version=0.0.1
+RUN apt-get -y update && apt-get install -y fortunes
+CMD ["sh", "-c", "/usr/games/fortune -a | cowsay"]
