@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  cloudwebsite:
+    image: cloudwebsite
+    build:
+      context: .
+      dockerfile: ./Dockerfile
